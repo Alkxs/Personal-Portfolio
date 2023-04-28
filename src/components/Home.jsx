@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <section name='home' className='bg-red-500 h-screen'>
+      <section name='home' className='h-screen'>
 
         <div className='container mt-10'>
             <p className='text-cyan-500 text-2xl tracking-wide font-semibold'>Hey, I am </p>
