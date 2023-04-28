@@ -90,7 +90,7 @@ const Contact = () => {
           <div className='flex justify-center items-center'>
             <button
               type='submit'
-              className='text-[#0a192f] dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 duration-300 px-6 lg:px-8 py-3 lg:py-3 mt-4 :mt-10 mx-auto flex items-center rounded-md'
+              className='text-[#0a192f] dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 duration-300 px-6 lg:px-8 py-3 lg:py-3 mt-4 mx-auto flex items-center rounded-md'
             >
               Submit
             </button>
