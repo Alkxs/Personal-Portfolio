@@ -41,7 +41,7 @@ const Projects = () => {
                     Code
                   </button>
                 </a>
-                <a href='https://demo.com/' target='_blank'>
+                <a href='https://therafit.netlify.app/' target='_blank'>
                   <button className='text-[#0a192f] dark:text-white  border-[#0a192f] dark:border-cyan-500 border px-3 sm:px-4 md:px-6 xl:px-9 py-1 sm:py-2 xl:py-3 hover:text-cyan-500 hover:border-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 rounded-md hover:scale-105 duration-300'>
                     Live
                   </button>
@@ -71,13 +71,13 @@ const Projects = () => {
               <p className='w-full text-sm sm:text-lg'>My portfolio project built from scratch using the latest technologies and modern libraries.</p>
 
               <div className='buttons-container w-full flex justify-center items-center gap-8 flex-wrap'>
-                <a href='https://github.com/Alkxs/Portfolio-projects/tree/main/portfolio' target='_blank'>
+                <a href='https://github.com/Alkxs/Personal-Portfolio' target='_blank'>
                   <button className='text-[#0a192f] dark:text-white  border-[#0a192f] dark:border-cyan-500 border px-2 sm:px-3 md:px-5 xl:px-8 py-1 sm:py-2 xl:py-3 hover:text-cyan-500 hover:border-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 rounded-md hover:scale-105 duration-300'>
                     Code
                   </button>
                 </a>
 
-                <a href='https://demo.com/' target='_blank'>
+                <a href='https://alexlauri-portfolio.netlify.app/' target='_blank'>
                   <button className='text-[#0a192f] dark:text-white  border-[#0a192f] dark:border-cyan-500 border px-3 sm:px-4 md:px-6 xl:px-9 py-1 sm:py-2 xl:py-3 hover:text-cyan-500 hover:border-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 rounded-md hover:scale-105 duration-300'>
                     Live
                   </button>
@@ -125,7 +125,6 @@ const Projects = () => {
               See all projects
             </button>
           </div>
-
         </div>
       </div>
     </section>
