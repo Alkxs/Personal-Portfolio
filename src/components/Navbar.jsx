@@ -26,7 +26,7 @@ useEffect(() => {
     window.removeEventListener('scroll', handleScroll)
   }
 }, [])
-const navBackground = scrollPosition > 600 ? 'bg-white dark:bg-[#0a192f]' : 'bg-transparent'
+const navBackground = scrollPosition > 50 ? 'bg-white dark:bg-[#0a192f]' : 'bg-transparent'
 
   return (
     <div className={`${navBackground} text-[#0a192f] dark:text-gray-200 fixed w-full py-8 flex items-center px-6 sm:px-12 md:px-20 justify-between z-50`}>

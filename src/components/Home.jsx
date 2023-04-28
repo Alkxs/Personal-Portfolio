@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <section name='home' className='h-screen'>
 
-        <div className='container mt-10'>
+        <div className='container sm:mt-10 sm:mt-0'>
             <p className='text-cyan-500 text-2xl tracking-wide font-semibold'>Hey, I am </p>
           <h1 className='text-4xl sm:text-5xl md:text-7xl font-bold tracking-widest text-[#0a192f] dark:text-white z-0'>Alex Lauri</h1>
           <h2 className='text-2xl sm:text-3xl font-normal text-gray-500 dark:text-gray-300'>

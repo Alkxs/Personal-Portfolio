@@ -19,7 +19,7 @@
     @apply px-4 cursor-pointer
   }
   section {
-    @apply  w-full h-full py-32 flex justify-center items-center flex-col pt-40
+    @apply  w-full h-full flex justify-center items-center flex-col pt-40 py-32
   }
 }
 
