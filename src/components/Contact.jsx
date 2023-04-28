@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -12,28 +13,31 @@ const Contact = () => {
       })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+    async function handleSubmit(event) {
+      event.preventDefault()
 
-    const encode = (data) => {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + 
-          encodeURIComponent(data[key]))
-        .join("&")
-    }
-
-    const res = await fetch('/', {
+      try {
+        const response = await fetch('https://formspree.io/f/mjvdlbkq', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({ 'form-name': 'contact-form', ...formData }),
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json',
+          },
         })
 
-        if (res.ok) {
-          alert('Success!')
-          setFormData({ name: '', email: '', message: '' })
-        } else {
-          alert('Error submitting form')
-        }
+        const data = await response.json()
+        console.log(data)
+        toast.success('Message sent successfully!', {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        })
+      } catch (error) {
+        console.error(error)
+        toast.error('An error occurred. Please try again later.', {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        })
+      }
+
+    
       }
 
 
@@ -45,11 +49,8 @@ const Contact = () => {
           className='form-card max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-3xl bg-gray-100 dark:bg-[#112b52] flex flex-col w-full rounded-lg shadow-lg hover:shadow-2xl hover:shadow-black border border-gray-200 dark:border-cyan-500 py-4 sm:py-6 md:pt-8 lg:py-14 pb-1 sm:pb-2 md:pb-0 lg:pb-0 px-4 lg:px-14 sm:px-6 md:px-8 gap-2 md:gap-6 mb-4'
           name='contact'
           method='POST'
-          action='/'
-          data-netlify='true'
           onSubmit={handleSubmit}
         >
-          <input type='hidden' name='form-name' value='contact' />
           <input
             className='border dark:border-cyan-500  text-dark-main dark:text-gray-300 dark:bg-dark-main p-2 rounded-md'
             type='text'
@@ -81,6 +82,7 @@ const Contact = () => {
             >
               Submit
             </button>
+            <ToastContainer />
           </div>
         </form>
       </div>
