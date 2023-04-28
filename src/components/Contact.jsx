@@ -5,30 +5,36 @@ const Contact = () => {
 
 
   const handleChange = (e) => {
+    const {name, value} = e.target
     setFormData({ 
       ...formData, 
-      [e.target.name]: e.target.value 
+      [name]: value 
       })
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    const form = event.target
+  const handleSubmit = async (e) => {
+    e.preventDefault()
 
-    const response = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
-    })
-
-    if (response.ok) {
-      alert('Form successfully submitted')
-      setFormData({ name: '', email: '', message: '' })
-    } else {
-      alert('Error submitting form')
+    const encode = (data) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + 
+          encodeURIComponent(data[key]))
+        .join("&")
     }
-  }
 
+    const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({ 'form-name': 'contact-form', ...formData }),
+        })
+
+        if (res.ok) {
+          alert('Success!')
+          setFormData({ name: '', email: '', message: '' })
+        } else {
+          alert('Error submitting form')
+        }
+      }
 
 
   return (
