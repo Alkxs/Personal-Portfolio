@@ -14,7 +14,7 @@ import { useState, useEffect } from 'react'
   return (
     <>
       {up && (
-        <div className='hidden sm:block fixed bottom-10 right-10 text-lg bg-transparent border-none cursor-pointer text-black hover:text-violet-600 dark:text-white z-20 dark:hover:text-violet-600'>
+        <div className='hidden sm:block fixed bottom-10 right-10 text-lg bg-transparent border-none cursor-pointer text-black hover:text-cyan-500 dark:text-white z-20 dark:hover:text-cyan-500'>
           <Link to='home' smooth={true} duration={500}>
             <FaArrowUp size={30} />
           </Link>
