@@ -11,9 +11,6 @@ const ParticlesBackgroundDark = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine)
   }, [])
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container)
-  }, [])
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +29,6 @@ const ParticlesBackgroundDark = () => {
     }
   }, [])
 
-  return <Particles id='tsparticles' init={particlesInit} loaded={particlesLoaded} options={options} />
+  return <Particles id='tsparticles' init={particlesInit} options={options} />
 }
 export default ParticlesBackgroundDark

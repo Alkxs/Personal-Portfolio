@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
 
   const handleChange = (e) => {
     const {name, value} = e.target
@@ -15,6 +16,7 @@ const Contact = () => {
 
     async function handleSubmit(event) {
       event.preventDefault()
+      setIsSubmitting(true)
 
       try {
         const response = await fetch('https://formspree.io/f/mjvdlbkq', {
@@ -27,17 +29,19 @@ const Contact = () => {
 
         const data = await response.json()
         console.log(data)
-        toast.success('Message sent successfully!', {
-          position: toast.POSITION.BOTTOM_RIGHT,
-        })
+        setIsSubmitting(false)
+        setSubmitSuccess(true)
+        setFormData({ name: '', email: '', message: '' })
+        setSubmitError(false)
+        // alert('Message submitted successfully!')
       } catch (error) {
         console.error(error)
-        toast.error('An error occurred. Please try again later.', {
-          position: toast.POSITION.BOTTOM_RIGHT,
-        })
-      }
 
-    
+        setIsSubmitting(false)
+        setSubmitError(true)
+        setSubmitSuccess(false)
+        // alert('An error occurred. Please try again later.')
+      }
       }
 
 
@@ -82,8 +86,11 @@ const Contact = () => {
             >
               Submit
             </button>
-            <ToastContainer />
           </div>
+
+          {isSubmitting && <p className='text-center sm:text-lg mt-2 text-gray-500'>Submitting...</p>}
+          {submitSuccess && <p className='text-center sm:text-lg mt-2 text-green-500'>Message submitted successfully!</p>}
+          {submitError && <p className='text-center sm:text-lg mt-2 text-red-500'>An error occurred. Please try again later.</p>}
         </form>
       </div>
     </section>

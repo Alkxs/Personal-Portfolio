@@ -11,10 +11,6 @@ const ParticlesBackgroundLight = () => {
     await loadFull(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container)
-  }, [])
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 767) {
@@ -32,6 +28,6 @@ const ParticlesBackgroundLight = () => {
     }
   }, [])
 
-  return <Particles id='tsparticles' init={particlesInit} loaded={particlesLoaded} options={options} />
+  return <Particles id='tsparticles' init={particlesInit} options={options} />
 }
 export default ParticlesBackgroundLight
