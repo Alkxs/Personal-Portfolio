@@ -44,7 +44,7 @@ const Contact = () => {
         > 
           <input type='hidden' name='form-name' value='contact' />
           <input
-            className='border dark:border-cyan-500  text-black dark:bg-dark-main p-2 rounded-md'
+            className='border dark:border-cyan-500  text-dark-main dark:text-gray-300 dark:bg-dark-main p-2 rounded-md'
             type='text'
             placeholder='name'
             name='name'
@@ -52,15 +52,15 @@ const Contact = () => {
             onChange={handleChange}
           />
           <input
-            className='my-4 p-2 dark:bg-dark-main border dark:border-cyan-500 text-gray-300 rounded-md'
+            className='my-4 p-2 dark:bg-dark-main border dark:border-cyan-500 text-dark-main dark:text-gray-300 rounded-md'
             type='email'
             placeholder='email'
             name='email'
-            value={formData.message}
+            value={formData.email}
             onChange={handleChange}
           />
           <textarea
-            className='border dark:border-cyan-500 dark:bg-dark-main text-gray-300 p-2 rounded-md'
+            className='border dark:border-cyan-500 dark:bg-dark-main text-dark-main dark:text-gray-300 p-2 rounded-md'
             name='message'
             rows='5'
             placeholder='message'
