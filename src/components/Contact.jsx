@@ -33,14 +33,22 @@ const Contact = () => {
         setSubmitSuccess(true)
         setFormData({ name: '', email: '', message: '' })
         setSubmitError(false)
-        // alert('Message submitted successfully!')
+        
+        setTimeout(() => {
+          setSubmitSuccess(false)
+        }, 5000)
+
       } catch (error) {
         console.error(error)
 
         setIsSubmitting(false)
         setSubmitError(true)
         setSubmitSuccess(false)
-        // alert('An error occurred. Please try again later.')
+       
+        setTimeout(() => {
+          setSubmitError(false)
+        }, 3000)
+
       }
       }
 
