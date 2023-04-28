@@ -43,7 +43,7 @@ const cardSkills = [
   },
   {
     id: 8,
-    title: 'MondoDB',
+    title: 'MongoDB',
     img: '/skills2/mongodb.svg',
     color: '#4CAF50',
   },
