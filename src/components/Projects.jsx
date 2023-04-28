@@ -106,12 +106,12 @@ const Projects = () => {
               <p className='w-full text-sm sm:text-lg'>An engaging quiz app offering a personalized knowledge-testing challenge</p>
 
               <div className='buttons-container w-full flex justify-center items-center gap-8'>
-                <a href='https://github.com/Alkxs/TheraFit' target='_blank'>
+                <a href='https://github.com/Alkxs/Quizzle' target='_blank'>
                   <button className=' text-[#0a192f] dark:text-white  border-[#0a192f] dark:border-cyan-500 border px-2 sm:px-3 md:px-5 xl:px-8 py-1 sm:py-2 xl:py-3 hover:text-cyan-500 hover:border-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 rounded-md hover:scale-105 duration-300'>
                     Code
                   </button>
                 </a>
-                <a href='https://demo.com/' target='_blank'>
+                <a href='https://quizzle-app.netlify.app/' target='_blank'>
                   <button className='text-[#0a192f] dark:text-white  border-[#0a192f] dark:border-cyan-500 border px-3 sm:px-4 md:px-6 xl:px-9 py-1 sm:py-2 xl:py-3 hover:text-cyan-500 hover:border-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 rounded-md hover:scale-105 duration-300'>
                     Live
                   </button>
@@ -121,9 +121,11 @@ const Projects = () => {
           </div>
 
           <div className='flex justify-center items-center'>
-            <button className='text-[#0a192f] dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 duration- md:px-53xl px-6 lg:px-8 py-3 xl:py-3 mt-4 :mt-10 mx-auto flex items-center rounded-md'>
-              See all projects
-            </button>
+            <a href='https://github.com/Alkxs' target='_blank'>
+              <button className='text-[#0a192f] dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 duration- md:px-53xl px-6 lg:px-8 py-3 xl:py-3 mt-4 :mt-10 mx-auto flex items-center rounded-md'>
+                See all projects
+              </button>
+            </a>
           </div>
         </div>
       </div>
