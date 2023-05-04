@@ -43,7 +43,7 @@ const About = () => {
           </div>
 
           <div className='flex md:hidden justify-center items-center'>
-            <a href='../../pdfs/Alex Lauri CV 2023.pdf' target='_blank'>
+            <a href='../../pdfs/Alex Lauri CV.pdf' target='_blank'>
               <button className='text-[#0a192f] text-xs dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 px-6 lg:px-8 py-3 mt-4 :mt-10 mx-auto flex items-center justify-around gap-2 rounded-md'>
                 <div>Download CV</div>
                 <div>

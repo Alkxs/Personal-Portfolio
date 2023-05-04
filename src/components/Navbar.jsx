@@ -143,7 +143,7 @@ const navBackground = scrollPosition > 50 ? 'bg-white dark:bg-[#0a192f]' : 'bg-t
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-1px] hover:pl-14 duration-300 bg-[#15c915aa] rounded-r-xl m-2'>
-            <a className='flex justify-between items-center w-full text-white' href='../../pdfs/Alex Lauri CV 2023.pdf' target='_blank'>
+            <a className='flex justify-between items-center w-full text-white' href='../../pdfs/Alex Lauri CV.pdf' target='_blank'>
               CV <BsFillPersonLinesFill size={30} />
             </a>
           </li>
