@@ -122,7 +122,7 @@ const Projects = () => {
 
           <div className='flex justify-center items-center'>
             <a href='https://github.com/Alkxs' target='_blank'>
-              <button className='text-[#0a192f] dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 duration- md:px-53xl px-6 lg:px-8 py-3 xl:py-3 mt-4 :mt-10 mx-auto flex items-center rounded-md'>
+              <button className='text-[#0a192f] dark:bg-dark-main dark:text-white border border-[#0a192f] hover:border-cyan-500 dark:border dark:border-cyan-500 hover:text-white hover:bg-cyan-500 dark:hover:border-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500  px-6 lg:px-8 py-3 xl:py-3 mt-4 :mt-10 mx-auto flex items-center rounded-md'>
                 See all projects
               </button>
             </a>

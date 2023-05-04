@@ -120,7 +120,7 @@ const navBackground = scrollPosition > 50 ? 'bg-white dark:bg-[#0a192f]' : 'bg-t
         </li>
       </ul>
       {/* Social Icons */}
-      <div className='hidden lg:flex fixed flex-col top-1/2 left-0 transform -translate-y-1/2'>
+      <div className='hidden md:flex fixed flex-col top-1/2 left-0 transform -translate-y-1/2'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-1px] hover:p-6 duration-300 bg-[#0A66C2] rounded-r-xl m-2'>
             <a className='flex justify-between items-center w-full text-white' href='https://www.linkedin.com/in/alexlauri/' target='_blank'>
@@ -143,7 +143,7 @@ const navBackground = scrollPosition > 50 ? 'bg-white dark:bg-[#0a192f]' : 'bg-t
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-1px] hover:pl-14 duration-300 bg-[#15c915aa] rounded-r-xl m-2'>
-            <a className='flex justify-between items-center w-full text-white' href=''>
+            <a className='flex justify-between items-center w-full text-white' href='../../pdfs/Alex Lauri CV 2023.pdf' target='_blank'>
               CV <BsFillPersonLinesFill size={30} />
             </a>
           </li>
