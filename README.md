@@ -69,8 +69,8 @@ My Personal Portfolio App is designed to showcase my projects, skills, and exper
       <img src='./assets/screenshots/3.png' alt='About page' >
       <img src='./assets/screenshots/4.png' alt='Projects 1' >
       <img src='./assets/screenshots/5.png' alt='Projects 2' >
-      <img src='./assets/screenshots/5.png' alt='Skills page ' >
-      <img src='./assets/screenshots/5.png' alt='Contact page' >
+      <img src='./assets/screenshots/6.png' alt='Skills page ' >
+      <img src='./assets/screenshots/7.png' alt='Contact page' >
       </div>
 </details>
 
