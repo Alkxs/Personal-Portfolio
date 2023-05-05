@@ -6,7 +6,10 @@
  # Personal Portfolio App
 
  <img src="./public/avatar.svg" alt="Logo" width="320">
+ 
  <br />
+ <br />
+ 
  <p align="center">
     Welcome to my personal portfolio app: A platform where I share my work, projects, and experiences as a developer, aiming to inspire others and connect with like-minded individuals in the tech industry.
  </p>
