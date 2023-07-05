@@ -1,7 +1,6 @@
 import profile from '../assets/profile.png'
 import { FiDownload } from 'react-icons/fi'
 
-
 const About = () => {
   return (
     <section name='about' className='pt-32'>
@@ -19,10 +18,6 @@ const About = () => {
             <div className='w-full text-left flex justify-start'>
               <div>🌐</div>
               <div className='pl-4 font-normal'>Proficient in the MERN stack, with a focus on Front End Development</div>
-            </div>
-            <div className='w-full text-left flex justify-start'>
-              <div>🏔️</div>
-              <div className='pl-4 font-normal'>Currently living in Zurich, eager to contribute to the local tech scene</div>
             </div>
             <div className='w-full text-left flex justify-start'>
               <div>👨‍💻</div>
