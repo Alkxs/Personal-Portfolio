@@ -7,58 +7,55 @@ const Contact = () => {
   const [submitError, setSubmitError] = useState(false)
 
   const handleChange = (e) => {
-    const {name, value} = e.target
-    setFormData({ 
-      ...formData, 
-      [name]: value 
-      })
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
   }
 
-    async function handleSubmit(event) {
-      event.preventDefault()
-      setIsSubmitting(true)
+  async function handleSubmit(event) {
+    event.preventDefault()
+    setIsSubmitting(true)
 
-      try {
-        const response = await fetch('https://formspree.io/f/mjvdlbkq', {
-          method: 'POST',
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
+    try {
+      const response = await fetch('https://formspree.io/f/mjvdlbkq', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
 
-        const data = await response.json()
-        console.log(data)
-        setIsSubmitting(false)
-        setSubmitSuccess(true)
-        setFormData({ name: '', email: '', message: '' })
-        setSubmitError(false)
-        
-        setTimeout(() => {
-          setSubmitSuccess(false)
-        }, 5000)
+      const data = await response.json()
+      console.log(data)
+      setIsSubmitting(false)
+      setSubmitSuccess(true)
+      setFormData({ name: '', email: '', message: '' })
+      setSubmitError(false)
 
-      } catch (error) {
-        console.error(error)
-
-        setIsSubmitting(false)
-        setSubmitError(true)
+      setTimeout(() => {
         setSubmitSuccess(false)
-       
-        setTimeout(() => {
-          setSubmitError(false)
-        }, 3000)
+      }, 5000)
+    } catch (error) {
+      console.error(error)
 
-      }
-      }
+      setIsSubmitting(false)
+      setSubmitError(true)
+      setSubmitSuccess(false)
 
+      setTimeout(() => {
+        setSubmitError(false)
+      }, 3000)
+    }
+  }
 
   return (
     <section name='contact'>
       <h2 className='title'>contact</h2>
       <div className='container'>
         <form
-          className='form-card max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-3xl bg-gray-100 dark:bg-[#112b52] flex flex-col w-full rounded-lg shadow-lg hover:shadow-2xl hover:shadow-black border border-gray-200 dark:border-cyan-500 py-4 sm:py-6 md:pt-8 lg:py-14 pb-3 md:pb-0 lg:pb-0 px-4 lg:px-14 sm:px-6 md:px-8 gap-2 md:gap-6 mb-4'
+          className='form-card max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-3xl bg-gray-100 dark:bg-[#112b52] flex flex-col w-full rounded-lg shadow-lg hover:shadow-2xl hover:shadow-black border border-gray-200 dark:border-cyan-500 py-4 sm:py-6 md:pt-8 lg:py-14 pb-3 md:pb-4 lg:pb-6 px-4 lg:px-14 sm:px-6 md:px-8 gap-2 md:gap-6 mb-4'
           name='contact'
           method='POST'
           onSubmit={handleSubmit}

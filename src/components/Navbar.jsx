@@ -1,32 +1,30 @@
 import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter, FaHome, FaRegUser, FaImage, FaClipboardList, FaRegEnvelope } from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
-import {Link} from 'react-scroll'
+import { HiOutlineMail } from 'react-icons/hi'
+import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { Link } from 'react-scroll'
 import Switcher from './Switcher'
-
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
 
-
   const handleMobileMenuToggle = () => {
     setShowMobileMenu(!showMobileMenu)
-  } 
-
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollPosition = window.pageYOffset
-    setScrollPosition(currentScrollPosition)
   }
-  window.addEventListener('scroll', handleScroll)
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll)
-  }
-}, [])
-const navBackground = scrollPosition > 50 ? 'bg-white dark:bg-[#0a192f]' : 'bg-transparent'
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset
+      setScrollPosition(currentScrollPosition)
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  const navBackground = scrollPosition > 50 ? 'bg-white dark:bg-[#0a192f]' : 'bg-transparent'
 
   return (
     <div className={`${navBackground} text-[#0a192f] dark:text-gray-200 fixed w-full py-8 flex items-center px-6 sm:px-12 md:px-20 justify-between z-50`}>
