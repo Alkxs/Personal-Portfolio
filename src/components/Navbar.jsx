@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter, FaHome, FaRegUser, FaImage, FaClipboardList, FaRegEnvelope } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaHome, FaRegUser, FaImage, FaClipboardList, FaRegEnvelope } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
@@ -130,13 +131,13 @@ const Navbar = () => {
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-1px] hover:pl-9 duration-300 bg-[#00ACEE] rounded-r-xl m-2'>
-            <a className='flex justify-between items-center w-full text-white' href='https://twitter.com/Alex_Lauri_' target='_blank'>
-              Twitter <FaTwitter size={30} />
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-1px] hover:pl-9 duration-300 bg-white rounded-r-xl m-2'>
+            <a className='flex justify-between items-center w-full text-black' href='https://x.com/Alex_Lauri_' target='_blank'>
+              X <FaXTwitter size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-1px] hover:pl-10 duration-300 bg-[#DB4437] rounded-r-xl m-2'>
-            <a className='flex justify-between items-center w-full text-white' href='mailto:alex.mav.80@gmail.com' target='_blank'>
+            <a className='flex justify-between items-center w-full text-white' href='mailto:alex.mav.80@gmail.com'>
               Gmail <HiOutlineMail size={30} />
             </a>
           </li>

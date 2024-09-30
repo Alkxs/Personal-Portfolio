@@ -1,4 +1,5 @@
-import {FaGithub, FaLinkedin, FaTwitter, FaEnvelope} from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
@@ -12,10 +13,10 @@ const Footer = () => {
           <a href='https://www.linkedin.com/in/alexlauri/' target='_blank' rel='noopener noreferrer' className='linkedin px-2 sm:px-5 dark:text-gray-200'>
             <FaLinkedin className='hover:text-[#006599]' size={30} />
           </a>
-          <a href='https://twitter.com/Alex_Lauri_' target='_blank' rel='noopener noreferrer' className='twitter px-2 sm:px-5 dark:text-gray-200'>
-            <FaTwitter className='hover:text-[#2daae4]' size={30} />
+          <a href='https://x.com/Alex_Lauri_' target='_blank' rel='noopener noreferrer' className='twitter px-2 sm:px-5 dark:text-gray-200'>
+            <FaXTwitter className='hover:text-white' size={30} />
           </a>
-          <a href='mailto:alex.mav.80@gmail.com' target='_blank' rel='noopener noreferrer' className='gmail px-2 sm:px-5 dark:text-gray-200'>
+          <a href='mailto:alex.mav.80@gmail.com' rel='noopener noreferrer' className='gmail px-2 sm:px-5 dark:text-gray-200'>
             <FaEnvelope className='hover:text-[#f14436]' size={30} />
           </a>
         </div>
